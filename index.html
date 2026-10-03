@@ -10,7 +10,7 @@
 <title>Eiken Smart Review</title>
 <style>
 :root{--bg:#f7f7fb;--card:#fff;--text:#15161a;--muted:#757b86;--line:#e6e8ee;--shadow:0 16px 44px rgba(18,24,38,.10);--good:#e7f7eb;--goodb:#92d1a0;--bad:#fff0f0;--badb:#e0a2a2;--primary:#22252b;--accent:#eef0f7;--hard:#eceffc;--normal:#eaf6e8;--easy:#fff4dd}
-*{box-sizing:border-box}html,body{margin:0;min-height:100%;background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,"Hiragino Sans","Yu Gothic",sans-serif}button{font:inherit;-webkit-tap-highlight-color:transparent}.app{max-width:720px;margin:0 auto;padding:env(safe-area-inset-top) 14px calc(28px + env(safe-area-inset-bottom))}header{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:14px 2px 12px}.brand{font-size:20px;font-weight:850;letter-spacing:-.03em}.brand span{opacity:.58}.head-right{display:flex;align-items:center;gap:10px}.mini{font-size:11px;color:var(--muted);text-align:right;line-height:1.1}.mini b{display:block;color:var(--text);font-size:15px}.icon-btn{width:44px;height:44px;border:1px solid var(--line);background:white;border-radius:14px;display:grid;place-items:center;font-size:20px}.study-card{background:var(--card);border:1px solid var(--line);border-radius:24px;box-shadow:var(--shadow);overflow:hidden}.card-top{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:13px 16px;border-bottom:1px solid var(--line);font-size:12px;color:var(--muted)}.badges{display:flex;gap:7px;flex-wrap:wrap}.badge{background:var(--accent);border-radius:999px;padding:5px 8px;font-weight:750}.content{padding:20px 17px 18px}.q-head{display:flex;justify-content:flex-end;margin-bottom:10px}.speak{border:1px solid var(--line);background:#fff;border-radius:12px;min-height:42px;padding:9px 12px;font-weight:750;display:inline-flex;align-items:center;gap:7px;color:#30333a}.speak:active{transform:scale(.98)}.prompt{white-space:pre-wrap;font-size:18px;line-height:1.58;font-weight:610}.vocab-wrap{display:flex;align-items:center;justify-content:center;gap:12px;padding:18px 0 8px}.vocab{font-size:42px;font-weight:850;letter-spacing:-.03em;text-align:center;overflow-wrap:anywhere}.options{display:grid;gap:10px;margin-top:18px}.opt-row{display:grid;grid-template-columns:1fr;gap:8px;align-items:stretch}.opt-row.revealed{grid-template-columns:1fr 48px}.choice{border:1px solid var(--line);background:#fff;border-radius:15px;padding:13px 13px;text-align:left;display:flex;gap:10px;align-items:flex-start;min-height:58px}.choice:active:not(:disabled){transform:scale(.992)}.choice:disabled{color:inherit;opacity:1}.letter{width:30px;height:30px;min-width:30px;border-radius:9px;background:#f0f2f6;display:grid;place-items:center;font-weight:850}.opt-text{font-size:17px;font-weight:720;line-height:1.35}.jp{display:block;margin-top:3px;font-size:14px;font-weight:550;color:#555e69}.choice.correct{background:var(--good);border-color:var(--goodb)}.choice.wrong{background:var(--bad);border-color:var(--badb)}.choice.dim{opacity:.68}.speaker-only{border:1px solid var(--line);background:#fff;border-radius:14px;font-size:20px;display:grid;place-items:center;min-height:48px}.speaker-only:active{transform:scale(.96)}.answer-box{margin-top:17px;border-top:1px solid var(--line);padding-top:16px}.example-box{margin-top:14px;padding:14px;border:1px solid var(--line);border-radius:15px;background:#f8f9fc}.example-title{font-size:12px;font-weight:850;color:var(--muted);text-transform:uppercase;letter-spacing:.06em;margin-bottom:7px}.example-sentence{font-size:16px;line-height:1.55;font-weight:650}.example-actions{margin-top:10px;display:flex;justify-content:flex-start}.result{font-size:19px;font-weight:850;margin-bottom:8px}.result.good{color:#26753a}.result.bad{color:#a03636}.answer-line{font-weight:750;line-height:1.5}.meanings{margin-top:10px;display:grid;gap:5px;font-size:14px;color:#525a66}.reveal{width:100%;border:0;border-radius:15px;background:var(--primary);color:white;padding:14px 15px;margin-top:17px;font-weight:850;font-size:16px}.rating-area{border-top:1px solid var(--line);background:#fbfbfd;padding:13px 13px 16px}.rating-note{text-align:center;color:var(--muted);font-size:12px;font-weight:700;margin-bottom:10px}.ratings{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}.rate{border:1px solid var(--line);border-radius:14px;padding:11px 5px;min-height:62px;font-weight:850}.rate small{display:block;color:#5c626c;margin-top:3px;font-weight:650}.hard{background:var(--hard)}.normal{background:var(--normal)}.easy{background:var(--easy)}.foot{text-align:center;color:var(--muted);font-size:12px;line-height:1.45;padding:12px 8px}.overlay{position:fixed;inset:0;background:rgba(0,0,0,.38);z-index:20;display:flex;align-items:flex-end;justify-content:center}.panel{background:white;width:min(720px,100%);border-radius:24px 24px 0 0;padding:20px 17px calc(20px + env(safe-area-inset-bottom));box-shadow:var(--shadow)}.panel h2{margin:0 0 5px}.panel p{margin:0 0 16px;color:var(--muted);font-size:14px;line-height:1.5}.setting-btn{width:100%;border:1px solid var(--line);background:#fff;border-radius:14px;padding:13px;margin-top:9px;font-weight:800}.danger{background:#fff0f0}.hidden{display:none!important}.toast{position:fixed;left:50%;bottom:calc(22px + env(safe-area-inset-bottom));transform:translate(-50%,18px);opacity:0;background:#15161a;color:white;padding:9px 13px;border-radius:999px;font-size:13px;font-weight:750;transition:.2s;z-index:40;pointer-events:none}.toast.show{opacity:1;transform:translate(-50%,0)}
+*{box-sizing:border-box}html,body{margin:0;min-height:100%;background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,"Hiragino Sans","Yu Gothic",sans-serif}button{font:inherit;-webkit-tap-highlight-color:transparent}.app{max-width:720px;margin:0 auto;padding:env(safe-area-inset-top) 14px calc(28px + env(safe-area-inset-bottom))}header{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:14px 2px 12px}.brand{font-size:20px;font-weight:850;letter-spacing:-.03em}.brand span{opacity:.58}.head-right{display:flex;align-items:center;gap:10px}.mini{font-size:11px;color:var(--muted);text-align:right;line-height:1.1}.mini b{display:block;color:var(--text);font-size:15px}.icon-btn{width:44px;height:44px;border:1px solid var(--line);background:white;border-radius:14px;display:grid;place-items:center;font-size:20px}.study-card{background:var(--card);border:1px solid var(--line);border-radius:24px;box-shadow:var(--shadow);overflow:hidden}.card-top{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:13px 16px;border-bottom:1px solid var(--line);font-size:12px;color:var(--muted)}.badges{display:flex;gap:7px;flex-wrap:wrap}.badge{background:var(--accent);border-radius:999px;padding:5px 8px;font-weight:750}.content{padding:20px 17px 18px}.q-head{display:flex;justify-content:flex-end;margin-bottom:10px}.speak{border:1px solid var(--line);background:#fff;border-radius:12px;min-height:42px;padding:9px 12px;font-weight:750;display:inline-flex;align-items:center;gap:7px;color:#30333a}.speak:active{transform:scale(.98)}.prompt{white-space:pre-wrap;font-size:18px;line-height:1.58;font-weight:610}.vocab-wrap{display:flex;align-items:center;justify-content:center;gap:12px;padding:18px 0 8px}.vocab{font-size:42px;font-weight:850;letter-spacing:-.03em;text-align:center;overflow-wrap:anywhere}.options{display:grid;gap:10px;margin-top:18px}.opt-row{display:grid;grid-template-columns:1fr;gap:8px;align-items:stretch}.opt-row.revealed{grid-template-columns:1fr 48px}.choice{border:1px solid var(--line);background:#fff;border-radius:15px;padding:13px 13px;text-align:left;display:flex;gap:10px;align-items:flex-start;min-height:58px}.choice:active:not(:disabled){transform:scale(.992)}.choice:disabled{color:inherit;opacity:1}.letter{width:30px;height:30px;min-width:30px;border-radius:9px;background:#f0f2f6;display:grid;place-items:center;font-weight:850}.opt-text{font-size:17px;font-weight:720;line-height:1.35}.jp{display:block;margin-top:3px;font-size:14px;font-weight:550;color:#555e69}.choice.correct{background:var(--good);border-color:var(--goodb)}.choice.wrong{background:var(--bad);border-color:var(--badb)}.choice.dim{opacity:.68}.speaker-only{border:1px solid var(--line);background:#fff;border-radius:14px;font-size:20px;display:grid;place-items:center;min-height:48px}.speaker-only:active{transform:scale(.96)}.answer-box{margin-top:17px;border-top:1px solid var(--line);padding-top:16px}.example-box{margin-top:14px;padding:14px;border:1px solid var(--line);border-radius:15px;background:#f8f9fc}.example-title{font-size:12px;font-weight:850;color:var(--muted);text-transform:uppercase;letter-spacing:.06em;margin-bottom:7px}.example-sentence{font-size:16px;line-height:1.55;font-weight:650}.example-loading{color:var(--muted);font-weight:600}.example-jp{margin-top:4px;font-size:13px;color:var(--muted);font-weight:650}.example-actions{margin-top:10px;display:flex;justify-content:flex-start}.result{font-size:19px;font-weight:850;margin-bottom:8px}.result.good{color:#26753a}.result.bad{color:#a03636}.answer-line{font-weight:750;line-height:1.5}.meanings{margin-top:10px;display:grid;gap:5px;font-size:14px;color:#525a66}.reveal{width:100%;border:0;border-radius:15px;background:var(--primary);color:white;padding:14px 15px;margin-top:17px;font-weight:850;font-size:16px}.rating-area{border-top:1px solid var(--line);background:#fbfbfd;padding:13px 13px 16px}.rating-note{text-align:center;color:var(--muted);font-size:12px;font-weight:700;margin-bottom:10px}.ratings{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}.rate{border:1px solid var(--line);border-radius:14px;padding:11px 5px;min-height:62px;font-weight:850}.rate small{display:block;color:#5c626c;margin-top:3px;font-weight:650}.hard{background:var(--hard)}.normal{background:var(--normal)}.easy{background:var(--easy)}.foot{text-align:center;color:var(--muted);font-size:12px;line-height:1.45;padding:12px 8px}.overlay{position:fixed;inset:0;background:rgba(0,0,0,.38);z-index:20;display:flex;align-items:flex-end;justify-content:center}.panel{background:white;width:min(720px,100%);border-radius:24px 24px 0 0;padding:20px 17px calc(20px + env(safe-area-inset-bottom));box-shadow:var(--shadow)}.panel h2{margin:0 0 5px}.panel p{margin:0 0 16px;color:var(--muted);font-size:14px;line-height:1.5}.setting-btn{width:100%;border:1px solid var(--line);background:#fff;border-radius:14px;padding:13px;margin-top:9px;font-weight:800}.danger{background:#fff0f0}.hidden{display:none!important}.toast{position:fixed;left:50%;bottom:calc(22px + env(safe-area-inset-bottom));transform:translate(-50%,18px);opacity:0;background:#15161a;color:white;padding:9px 13px;border-radius:999px;font-size:13px;font-weight:750;transition:.2s;z-index:40;pointer-events:none}.toast.show{opacity:1;transform:translate(-50%,0)}
 @media(min-width:680px){.overlay{align-items:center}.panel{border-radius:24px}.app{padding-left:18px;padding-right:18px}}@media(max-width:390px){.brand{font-size:18px}.head-right{gap:7px}.content{padding-left:14px;padding-right:14px}.ratings{gap:6px}.rate{font-size:14px}.vocab{font-size:36px}}
 </style>
 </head>
@@ -47,11 +47,84 @@ const VOCAB_EXAMPLES={
   "2":"Her explanation was so lucid that everyone understood the idea immediately.",
   "3":"The manager offered a refund to appease the angry customer."
 };
-function exampleFor(c){
-  if(c.type==='vocab') return VOCAB_EXAMPLES[c.id]||('I learned how to use the word '+c.front+' in a sentence.');
-  const correct=(c.options||[]).find(o=>o.letter===c.answer);
-  if(!correct) return '';
-  return c.front.replace(/\(\s*\)/,correct.text);
+const EXAMPLE_CACHE_KEY='eiken-example-cache-v2';
+let exampleCache={};
+try{exampleCache=JSON.parse(localStorage.getItem(EXAMPLE_CACHE_KEY)||'{}')||{}}catch(e){exampleCache={}}
+const EXAMPLE_OVERRIDES={
+  "antecedent":"The invention of the telegraph was an important antecedent to modern instant communication.",
+  "annulment":"The court approved the annulment of their marriage.",
+  "impasse":"The negotiations reached an impasse after neither side would compromise.",
+  "overture":"The company made an overture to its rival about a possible partnership."
+};
+function saveExampleCache(){try{localStorage.setItem(EXAMPLE_CACHE_KEY,JSON.stringify(exampleCache))}catch(e){}}
+function fallbackExample(word,pos){
+  const w=String(word||'').trim();
+  const low=w.toLowerCase();
+  if(EXAMPLE_OVERRIDES[low])return EXAMPLE_OVERRIDES[low];
+  if(pos==='noun')return 'The '+w+' became an important issue during the discussion.';
+  if(pos==='adjective')return 'The manager described the situation as '+w+'.';
+  if(pos==='adverb')return 'She responded '+w+' when she was asked to explain what happened.';
+  if(pos==='verb')return 'The article gives a clear example of how to use “'+w+'” as a verb.';
+  if(/\s/.test(w))return 'The phrase “'+w+'” was used naturally during their conversation.';
+  return 'The teacher gave the class a clear example using the word “'+w+'”.';
+}
+async function fetchDictionaryExample(word){
+  const key=String(word||'').toLowerCase().trim();
+  if(EXAMPLE_OVERRIDES[key])return EXAMPLE_OVERRIDES[key];
+  if(exampleCache[key])return exampleCache[key];
+  let pos='';
+  try{
+    const res=await fetch('https://api.dictionaryapi.dev/api/v2/entries/en/'+encodeURIComponent(key));
+    if(res.ok){
+      const data=await res.json();
+      for(const entry of data||[]){
+        for(const meaning of entry.meanings||[]){
+          if(!pos&&meaning.partOfSpeech)pos=meaning.partOfSpeech;
+          for(const d of meaning.definitions||[]){
+            const ex=String(d.example||'').replace(/<[^>]+>/g,'').replace(/\s+/g,' ').trim();
+            if(ex){
+              exampleCache[key]=ex;
+              saveExampleCache();
+              return ex;
+            }
+          }
+        }
+      }
+    }
+  }catch(e){}
+  const fb=fallbackExample(word,pos);
+  exampleCache[key]=fb;
+  saveExampleCache();
+  return fb;
+}
+async function hydrateExamples(){
+  const nodes=[...document.querySelectorAll('[data-example-word]')];
+  await Promise.all(nodes.map(async node=>{
+    const word=node.dataset.exampleWord||'';
+    const ex=VOCAB_EXAMPLES[node.dataset.cardId]||await fetchDictionaryExample(word);
+    const sentence=node.querySelector('.example-sentence');
+    const btn=node.querySelector('[data-example-speak]');
+    if(sentence){
+      sentence.textContent=ex;
+      sentence.classList.remove('example-loading');
+    }
+    if(btn){
+      btn.dataset.speak=ex;
+      btn.disabled=false;
+    }
+  }));
+  bindSpeakButtons();
+}
+function bindSpeakButtons(){
+  document.querySelectorAll('[data-speak]').forEach(b=>{
+    if(b.disabled||b.dataset.boundSpeak==='1')return;
+    b.dataset.boundSpeak='1';
+    b.addEventListener('click',e=>{
+      e.preventDefault();
+      e.stopPropagation();
+      speak(b.dataset.speak);
+    });
+  });
 }
 function speak(text){if(!('speechSynthesis'in window))return;window.speechSynthesis.cancel();let u=new SpeechSynthesisUtterance(text);u.lang='en-US';u.rate=.92;let vs=window.speechSynthesis.getVoices();let v=vs.find(x=>/^en-US$/i.test(x.lang))||vs.find(x=>/^en/i.test(x.lang));if(v)u.voice=v;window.speechSynthesis.speak(u)}
 function speaker(text,label='Hear pronunciation'){return '<button class="speaker-only" type="button" aria-label="'+esc(label)+'" data-speak="'+esc(text)+'">🔊</button>'}
@@ -70,7 +143,7 @@ function render(){
   if(c.type==='vocab'){
     h+='<div class="vocab-wrap"><div class="vocab">'+esc(c.front)+'</div>'+(revealed?speaker(c.front):'')+'</div>';
     if(!revealed)h+='<button class="reveal" id="reveal">Show answer</button>';
-    else {let ex=exampleFor(c);h+='<div class="answer-box"><div class="answer-line" style="font-size:22px;text-align:center">'+esc(c.back)+'</div><div class="example-box"><div class="example-title">Example sentence</div><div class="example-sentence">'+esc(ex)+'</div><div class="example-actions"><button class="speak" type="button" data-speak="'+esc(ex)+'">🔊 Hear example</button></div></div></div>';}
+    else {h+='<div class="answer-box"><div class="answer-line" style="font-size:22px;text-align:center">'+esc(c.back)+'</div><div class="example-box" data-card-id="'+esc(c.id)+'" data-example-word="'+esc(c.front)+'"><div class="example-title">Example sentence</div><div class="example-sentence example-loading">Loading a different example…</div><div class="example-actions"><button class="speak" type="button" data-example-speak="1" data-speak="" disabled>🔊 Hear example</button></div></div></div>';}}
   }else{
     if(revealed)h+='<div class="q-head"><button class="speak" type="button" data-speak="'+esc(c.front)+'">🔊 Read question</button></div>';
     h+='<div class="prompt">'+esc(c.front)+'</div><div class="options">';
@@ -82,13 +155,13 @@ function render(){
     h+='</div>';
     if(revealed){
       let chosen=c.options[picked],ok=chosen&&chosen.letter===c.answer,correct=c.options.find(o=>o.letter===c.answer);
-      h+='<div class="answer-box"><div class="result '+(ok?'good':'bad')+'">'+(ok?'Correct!':'Not quite')+'</div><div class="answer-line">Answer: '+esc(correct?.letter)+' — '+esc(correct?.text)+'（'+esc(correct?.jp)+'）</div><div class="meanings">'+c.options.map(o=>'<div>'+esc(o.letter)+'. '+esc(o.text)+' = '+esc(o.jp)+'</div>').join('')+'</div>'+c.options.map(o=>{let ex=c.front.replace(/\\(\\s*\\)/,o.text);return '<div class="example-box"><div class="example-title">'+esc(o.letter)+'. Example — '+esc(o.text)+'</div><div class="example-sentence">'+esc(ex)+'</div><div class="example-actions"><button class="speak" type="button" data-speak="'+esc(ex)+'">🔊 Hear '+esc(o.letter)+' example</button></div></div>'}).join('')+'</div>';
+      h+='<div class="answer-box"><div class="result '+(ok?'good':'bad')+'">'+(ok?'Correct!':'Not quite')+'</div><div class="answer-line">Answer: '+esc(correct?.letter)+' — '+esc(correct?.text)+'（'+esc(correct?.jp)+'）</div><div class="meanings">'+c.options.map(o=>'<div>'+esc(o.letter)+'. '+esc(o.text)+' = '+esc(o.jp)+'</div>').join('')+'</div>'+c.options.map(o=>'<div class="example-box" data-example-word="'+esc(o.text)+'"><div class="example-title">'+esc(o.letter)+'. Example — '+esc(o.text)+'</div><div class="example-jp">'+esc(o.jp)+'</div><div class="example-sentence example-loading">Loading a different example…</div><div class="example-actions"><button class="speak" type="button" data-example-speak="1" data-speak="" disabled>🔊 Hear '+esc(o.letter)+' example</button></div></div>').join('')+'</div>';
     }
   }
   $('content').innerHTML=h;
-  document.querySelectorAll('[data-speak]').forEach(b=>b.addEventListener('click',e=>{e.preventDefault();e.stopPropagation();speak(b.dataset.speak)}));
+  bindSpeakButtons();
   document.querySelectorAll('[data-choice]').forEach(b=>b.addEventListener('click',()=>choose(Number(b.dataset.choice))));
-  let rev=$('reveal');if(rev)rev.onclick=()=>{revealed=true;render()};
+  let rev=$('reveal');if(rev)rev.onclick=()=>{revealed=true;render()};if(revealed)hydrateExamples();
 }
 function choose(i){if(revealed)return;let c=current();picked=i;revealed=true;state.answered++;if(c.options[i]?.letter===c.answer)state.correct++;save();render()}
 function rate(kind){
