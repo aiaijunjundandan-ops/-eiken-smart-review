@@ -82,7 +82,7 @@ function render(){
     h+='</div>';
     if(revealed){
       let chosen=c.options[picked],ok=chosen&&chosen.letter===c.answer,correct=c.options.find(o=>o.letter===c.answer);
-      let ex=exampleFor(c);h+='<div class="answer-box"><div class="result '+(ok?'good':'bad')+'">'+(ok?'Correct!':'Not quite')+'</div><div class="answer-line">Answer: '+esc(correct?.letter)+' — '+esc(correct?.text)+'（'+esc(correct?.jp)+'）</div><div class="meanings">'+c.options.map(o=>'<div>'+esc(o.letter)+'. '+esc(o.text)+' = '+esc(o.jp)+'</div>').join('')+'</div><div class="example-box"><div class="example-title">Example sentence — '+esc(correct?.text)+'</div><div class="example-sentence">'+esc(ex)+'</div><div class="example-actions"><button class="speak" type="button" data-speak="'+esc(ex)+'">🔊 Hear example</button></div></div></div>';
+      h+='<div class="answer-box"><div class="result '+(ok?'good':'bad')+'">'+(ok?'Correct!':'Not quite')+'</div><div class="answer-line">Answer: '+esc(correct?.letter)+' — '+esc(correct?.text)+'（'+esc(correct?.jp)+'）</div><div class="meanings">'+c.options.map(o=>'<div>'+esc(o.letter)+'. '+esc(o.text)+' = '+esc(o.jp)+'</div>').join('')+'</div>'+c.options.map(o=>{let ex=c.front.replace(/\\(\\s*\\)/,o.text);return '<div class="example-box"><div class="example-title">'+esc(o.letter)+'. Example — '+esc(o.text)+'</div><div class="example-sentence">'+esc(ex)+'</div><div class="example-actions"><button class="speak" type="button" data-speak="'+esc(ex)+'">🔊 Hear '+esc(o.letter)+' example</button></div></div>'}).join('')+'</div>';
     }
   }
   $('content').innerHTML=h;
