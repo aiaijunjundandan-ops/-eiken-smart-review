@@ -10,21 +10,21 @@
 <title>Eiken Smart Review</title>
 <style>
 :root{--bg:#f7f7fb;--card:#fff;--text:#15161a;--muted:#757b86;--line:#e6e8ee;--shadow:0 16px 44px rgba(18,24,38,.10);--good:#e7f7eb;--goodb:#92d1a0;--bad:#fff0f0;--badb:#e0a2a2;--primary:#22252b;--accent:#eef0f7;--hard:#eceffc;--normal:#eaf6e8;--easy:#fff4dd}
-*{box-sizing:border-box}html,body{margin:0;min-height:100%;background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,"Hiragino Sans","Yu Gothic",sans-serif}button{font:inherit;-webkit-tap-highlight-color:transparent}.app{max-width:720px;margin:0 auto;padding:env(safe-area-inset-top) 14px calc(28px + env(safe-area-inset-bottom))}header{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:14px 2px 12px}.brand{font-size:20px;font-weight:850;letter-spacing:-.03em}.brand span{opacity:.58}.head-right{display:flex;align-items:center;gap:10px}.mini{font-size:11px;color:var(--muted);text-align:right;line-height:1.1}.mini b{display:block;color:var(--text);font-size:15px}.icon-btn{width:44px;height:44px;border:1px solid var(--line);background:white;border-radius:14px;display:grid;place-items:center;font-size:20px}.study-card{background:var(--card);border:1px solid var(--line);border-radius:24px;box-shadow:var(--shadow);overflow:hidden}.card-top{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:13px 16px;border-bottom:1px solid var(--line);font-size:12px;color:var(--muted)}.badges{display:flex;gap:7px;flex-wrap:wrap}.badge{background:var(--accent);border-radius:999px;padding:5px 8px;font-weight:750}.content{padding:20px 17px 18px}.q-head{display:flex;justify-content:flex-end;margin-bottom:10px}.speak{border:1px solid var(--line);background:#fff;border-radius:12px;min-height:42px;padding:9px 12px;font-weight:750;display:inline-flex;align-items:center;gap:7px;color:#30333a}.speak:active{transform:scale(.98)}.prompt{white-space:pre-wrap;font-size:18px;line-height:1.58;font-weight:610}.vocab-wrap{display:flex;align-items:center;justify-content:center;gap:12px;padding:18px 0 8px}.vocab{font-size:42px;font-weight:850;letter-spacing:-.03em;text-align:center;overflow-wrap:anywhere}.options{display:grid;gap:10px;margin-top:18px}.opt-row{display:grid;grid-template-columns:1fr;gap:8px;align-items:stretch}.opt-row.revealed{grid-template-columns:1fr 48px}.choice{border:1px solid var(--line);background:#fff;border-radius:15px;padding:13px 13px;text-align:left;display:flex;gap:10px;align-items:flex-start;min-height:58px}.choice:active:not(:disabled){transform:scale(.992)}.choice:disabled{color:inherit;opacity:1}.letter{width:30px;height:30px;min-width:30px;border-radius:9px;background:#f0f2f6;display:grid;place-items:center;font-weight:850}.opt-text{font-size:17px;font-weight:720;line-height:1.35}.jp{display:block;margin-top:3px;font-size:14px;font-weight:550;color:#555e69}.choice.correct{background:var(--good);border-color:var(--goodb)}.choice.wrong{background:var(--bad);border-color:var(--badb)}.choice.dim{opacity:.68}.speaker-only{border:1px solid var(--line);background:#fff;border-radius:14px;font-size:20px;display:grid;place-items:center;min-height:48px}.speaker-only:active{transform:scale(.96)}.answer-box{margin-top:17px;border-top:1px solid var(--line);padding-top:16px}.example-box{margin-top:14px;padding:14px;border:1px solid var(--line);border-radius:15px;background:#f8f9fc}.example-title{font-size:12px;font-weight:850;color:var(--muted);text-transform:uppercase;letter-spacing:.06em;margin-bottom:7px}.example-sentence{font-size:16px;line-height:1.55;font-weight:650}.example-loading{color:var(--muted);font-weight:600}.example-jp{margin-top:4px;font-size:13px;color:var(--muted);font-weight:650}.example-actions{margin-top:10px;display:flex;justify-content:flex-start}.result{font-size:19px;font-weight:850;margin-bottom:8px}.result.good{color:#26753a}.result.bad{color:#a03636}.answer-line{font-weight:750;line-height:1.5}.meanings{margin-top:10px;display:grid;gap:5px;font-size:14px;color:#525a66}.reveal{width:100%;border:0;border-radius:15px;background:var(--primary);color:white;padding:14px 15px;margin-top:17px;font-weight:850;font-size:16px}.rating-area{border-top:1px solid var(--line);background:#fbfbfd;padding:13px 13px 16px}.rating-note{text-align:center;color:var(--muted);font-size:12px;font-weight:700;margin-bottom:10px}.ratings{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}.rate{border:1px solid var(--line);border-radius:14px;padding:11px 5px;min-height:62px;font-weight:850}.rate small{display:block;color:#5c626c;margin-top:3px;font-weight:650}.hard{background:var(--hard)}.normal{background:var(--normal)}.easy{background:var(--easy)}.foot{text-align:center;color:var(--muted);font-size:12px;line-height:1.45;padding:12px 8px}.overlay{position:fixed;inset:0;background:rgba(0,0,0,.38);z-index:20;display:flex;align-items:flex-end;justify-content:center}.panel{background:white;width:min(720px,100%);border-radius:24px 24px 0 0;padding:20px 17px calc(20px + env(safe-area-inset-bottom));box-shadow:var(--shadow)}.panel h2{margin:0 0 5px}.panel p{margin:0 0 16px;color:var(--muted);font-size:14px;line-height:1.5}.setting-btn{width:100%;border:1px solid var(--line);background:#fff;border-radius:14px;padding:13px;margin-top:9px;font-weight:800}.danger{background:#fff0f0}.hidden{display:none!important}.toast{position:fixed;left:50%;bottom:calc(22px + env(safe-area-inset-bottom));transform:translate(-50%,18px);opacity:0;background:#15161a;color:white;padding:9px 13px;border-radius:999px;font-size:13px;font-weight:750;transition:.2s;z-index:40;pointer-events:none}.toast.show{opacity:1;transform:translate(-50%,0)}
+*{box-sizing:border-box}html,body{margin:0;min-height:100%;background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,"Hiragino Sans","Yu Gothic",sans-serif}button{font:inherit;-webkit-tap-highlight-color:transparent}.app{max-width:720px;margin:0 auto;padding:env(safe-area-inset-top) 14px calc(28px + env(safe-area-inset-bottom))}header{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:14px 2px 12px}.brand{font-size:20px;font-weight:850;letter-spacing:-.03em}.brand span{opacity:.58}.head-right{display:flex;align-items:center;gap:10px}.mini{font-size:11px;color:var(--muted);text-align:right;line-height:1.1}.mini b{display:block;color:var(--text);font-size:15px}.icon-btn{width:44px;height:44px;border:1px solid var(--line);background:white;border-radius:14px;display:grid;place-items:center;font-size:20px}.study-card{background:var(--card);border:1px solid var(--line);border-radius:24px;box-shadow:var(--shadow);overflow:hidden}.card-top{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:13px 16px;border-bottom:1px solid var(--line);font-size:12px;color:var(--muted)}.badges{display:flex;gap:7px;flex-wrap:wrap}.badge{background:var(--accent);border-radius:999px;padding:5px 8px;font-weight:750}.content{padding:20px 17px 18px}.q-head{display:flex;justify-content:flex-end;margin-bottom:10px}.speak{border:1px solid var(--line);background:#fff;border-radius:12px;min-height:42px;padding:9px 12px;font-weight:750;display:inline-flex;align-items:center;gap:7px;color:#30333a}.speak:active{transform:scale(.98)}.prompt{white-space:pre-wrap;font-size:18px;line-height:1.58;font-weight:610}.vocab-wrap{display:flex;align-items:center;justify-content:center;gap:12px;padding:18px 0 8px}.vocab{font-size:42px;font-weight:850;letter-spacing:-.03em;text-align:center;overflow-wrap:anywhere}.options{display:grid;gap:10px;margin-top:18px}.opt-row{display:grid;grid-template-columns:1fr;gap:8px;align-items:stretch}.opt-row.revealed{grid-template-columns:1fr 48px}.choice{border:1px solid var(--line);background:#fff;border-radius:15px;padding:13px 13px;text-align:left;display:flex;gap:10px;align-items:flex-start;min-height:58px}.choice:active:not(:disabled){transform:scale(.992)}.choice:disabled{color:inherit;opacity:1}.letter{width:30px;height:30px;min-width:30px;border-radius:9px;background:#f0f2f6;display:grid;place-items:center;font-weight:850}.opt-text{font-size:17px;font-weight:720;line-height:1.35}.jp{display:block;margin-top:3px;font-size:14px;font-weight:550;color:#555e69}.choice.correct{background:var(--good);border-color:var(--goodb)}.choice.wrong{background:var(--bad);border-color:var(--badb)}.choice.dim{opacity:.68}.speaker-only{border:1px solid var(--line);background:#fff;border-radius:14px;font-size:20px;display:grid;place-items:center;min-height:48px}.speaker-only:active{transform:scale(.96)}.answer-box{margin-top:17px;border-top:1px solid var(--line);padding-top:16px}.example-box{margin-top:14px;padding:14px;border:1px solid var(--line);border-radius:15px;background:#f8f9fc}.example-title{font-size:12px;font-weight:850;color:var(--muted);text-transform:uppercase;letter-spacing:.06em;margin-bottom:7px}.example-sentence{font-size:16px;line-height:1.55;font-weight:650}.example-loading{color:var(--muted);font-weight:600}.example-jp{margin-top:4px;font-size:13px;color:var(--muted);font-weight:650}.example-actions{margin-top:10px;display:flex;justify-content:flex-start}.result{font-size:19px;font-weight:850;margin-bottom:8px}.result.good{color:#26753a}.result.bad{color:#a03636}.answer-line{font-weight:750;line-height:1.5}.meanings{margin-top:10px;display:grid;gap:5px;font-size:14px;color:#525a66}.reveal{width:100%;border:0;border-radius:15px;background:var(--primary);color:white;padding:14px 15px;margin-top:17px;font-weight:850;font-size:16px}.rating-area{border-top:1px solid var(--line);background:#fbfbfd;padding:13px 13px 16px}.rating-note{text-align:center;color:var(--muted);font-size:12px;font-weight:700;margin-bottom:10px}.ratings{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}.rate{border:1px solid var(--line);border-radius:14px;padding:11px 5px;min-height:62px;font-weight:850}.rate small{display:block;color:#5c626c;margin-top:3px;font-weight:650}.hard{background:var(--hard)}.normal{background:var(--normal)}.easy{background:var(--easy)}.statsbar{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:0 0 12px}.statbox{background:#fff;border:1px solid var(--line);border-radius:14px;padding:10px 8px;text-align:center}.statbox b{display:block;font-size:16px}.statbox span{font-size:10px;color:var(--muted);font-weight:750}.stats-detail{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin:12px 0}.stats-card{background:#f7f8fb;border-radius:14px;padding:12px}.stats-card small{display:block;color:var(--muted);font-weight:750;margin-bottom:3px}.stats-card b{font-size:21px}.foot{text-align:center;color:var(--muted);font-size:12px;line-height:1.45;padding:12px 8px}.overlay{position:fixed;inset:0;background:rgba(0,0,0,.38);z-index:20;display:flex;align-items:flex-end;justify-content:center}.panel{background:white;width:min(720px,100%);border-radius:24px 24px 0 0;padding:20px 17px calc(20px + env(safe-area-inset-bottom));box-shadow:var(--shadow)}.panel h2{margin:0 0 5px}.panel p{margin:0 0 16px;color:var(--muted);font-size:14px;line-height:1.5}.setting-btn{width:100%;border:1px solid var(--line);background:#fff;border-radius:14px;padding:13px;margin-top:9px;font-weight:800}.danger{background:#fff0f0}.hidden{display:none!important}.toast{position:fixed;left:50%;bottom:calc(22px + env(safe-area-inset-bottom));transform:translate(-50%,18px);opacity:0;background:#15161a;color:white;padding:9px 13px;border-radius:999px;font-size:13px;font-weight:750;transition:.2s;z-index:40;pointer-events:none}.toast.show{opacity:1;transform:translate(-50%,0)}
 @media(min-width:680px){.overlay{align-items:center}.panel{border-radius:24px}.app{padding-left:18px;padding-right:18px}}@media(max-width:390px){.brand{font-size:18px}.head-right{gap:7px}.content{padding-left:14px;padding-right:14px}.ratings{gap:6px}.rate{font-size:14px}.vocab{font-size:36px}}
 </style>
 </head>
 <body>
 <div class="app">
 <header><div class="brand">Eiken <span>Smart Review</span></div><div class="head-right"><div class="mini"><b id="reviews">0</b>reviews</div><div class="mini"><b id="accuracy">—</b>1st try</div><button class="icon-btn" id="settings" aria-label="Settings">⚙️</button></div></header>
-<section class="study-card">
+<div class="statsbar" id="statsbar"><div class="statbox"><b id="todayCards">0</b><span>cards today</span></div><div class="statbox"><b id="todayTime">0m</b><span>today</span></div><div class="statbox"><b id="sessionTime">0m</b><span>this session</span></div></div><section class="study-card">
 <div class="card-top"><div class="badges"><span class="badge" id="source"></span><span class="badge" id="level"></span></div><span id="cardNum"></span></div>
 <div class="content" id="content"></div>
 <div class="rating-area hidden" id="ratingArea"><div class="rating-note">How well did you know it?</div><div class="ratings"><button class="rate hard" data-rate="hard">Hard<small id="hardGap"></small></button><button class="rate normal" data-rate="normal">Normal<small id="normalGap"></small></button><button class="rate easy" data-rate="easy">Easy<small id="easyGap"></small></button></div></div>
 </section>
 <div class="foot">Progress saves automatically on this device. Pronunciation appears only after you answer. Familiar cards spread farther apart over time.</div>
 </div>
-<div class="overlay hidden" id="overlay"><div class="panel"><h2>Study settings</h2><p><b>Adaptive review:</b> each card has its own Level 0–4. Normal raises it by 1, Easy by 2, Hard lowers it by 1. “+N” means exactly N other cards appear before this card returns.</p><button class="setting-btn" id="shuffle">🔀 Shuffle current queue</button><button class="setting-btn danger" id="reset">↻ Reset all progress</button><button class="setting-btn" id="close">Close</button></div></div>
+<div class="overlay hidden" id="overlay"><div class="panel"><h2>Study settings</h2><p><b>Adaptive review:</b> each card has its own Level 0–4. Normal raises it by 1, Easy by 2, Hard lowers it by 1. “+N” means exactly N other cards appear before this card returns.</p><button class="setting-btn" id="showStats">📊 Study stats</button><div id="statsDetail" class="hidden"></div><button class="setting-btn" id="shuffle">🔀 Shuffle current queue</button><button class="setting-btn danger" id="reset">↻ Reset all progress</button><button class="setting-btn" id="close">Close</button></div></div>
 <div class="toast" id="toast"></div>
 <script src="examples-1.js"></script>
 <script src="examples-2.js"></script>
@@ -41,6 +41,64 @@ function shuffle(a){a=[...a];for(let i=a.length-1;i>0;i--){let j=Math.floor(Math
 function fresh(){return{v:3,queue:shuffle(CARDS.map(c=>c.id)),reviews:0,answered:0,correct:0,mastery:{}}}
 function load(){try{let raw=localStorage.getItem(KEY);if(!raw)return fresh();let s=JSON.parse(raw);if(!Array.isArray(s.queue))return fresh();let queue=s.queue.filter(id=>MAP[id]);if(!queue.length)queue=shuffle(CARDS.map(c=>c.id));const present=new Set(queue);for(const id of CARDS.map(c=>c.id)){if(!present.has(id)){queue.push(id);present.add(id)}}let m={};if(s.mastery&&typeof s.mastery==='object'){for(const [id,v] of Object.entries(s.mastery)){if(MAP[id])m[id]=Math.max(0,Math.min(4,Number(v)||0))}}return{v:3,queue,reviews:Number(s.reviews)||0,answered:Number(s.answered)||0,correct:Number(s.correct)||0,mastery:m}}catch(e){return fresh()}}
 let state=load();
+
+const STATS_KEY='eiken-study-stats-v1';
+let studyStats={byDate:{}};
+try{
+  const parsed=JSON.parse(localStorage.getItem(STATS_KEY)||'{}');
+  if(parsed&&typeof parsed==='object'&&parsed.byDate)studyStats=parsed;
+}catch(e){}
+function statsDate(){
+  const d=new Date();
+  return d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0');
+}
+function ensureDay(){
+  const k=statsDate();
+  if(!studyStats.byDate[k])studyStats.byDate[k]={cards:0,seconds:0};
+  return studyStats.byDate[k];
+}
+function saveStats(){try{localStorage.setItem(STATS_KEY,JSON.stringify(studyStats))}catch(e){}}
+function fmtStudyTime(sec){
+  sec=Math.max(0,Math.floor(Number(sec)||0));
+  if(sec<60)return sec+'s';
+  const m=Math.floor(sec/60);
+  if(m<60)return m+'m';
+  const h=Math.floor(m/60),r=m%60;
+  return h+'h '+String(r).padStart(2,'0')+'m';
+}
+function totalStatCards(){return Object.values(studyStats.byDate).reduce((n,x)=>n+(Number(x.cards)||0),0)}
+function totalStatSeconds(){return Object.values(studyStats.byDate).reduce((n,x)=>n+(Number(x.seconds)||0),0)}
+let sessionSeconds=0;
+let lastTick=Date.now();
+let lastActivity=Date.now();
+['pointerdown','touchstart','keydown','scroll'].forEach(ev=>window.addEventListener(ev,()=>{lastActivity=Date.now()},{passive:true}));
+function updateStatsUI(){
+  const day=ensureDay();
+  const tc=document.getElementById('todayCards');
+  const tt=document.getElementById('todayTime');
+  const st=document.getElementById('sessionTime');
+  if(tc)tc.textContent=day.cards||0;
+  if(tt)tt.textContent=fmtStudyTime(day.seconds||0);
+  if(st)st.textContent=fmtStudyTime(sessionSeconds);
+  const detail=document.getElementById('statsDetail');
+  if(detail&&!detail.classList.contains('hidden')){
+    detail.innerHTML='<div class="stats-detail"><div class="stats-card"><small>Today</small><b>'+String(day.cards||0)+' cards</b><div>'+fmtStudyTime(day.seconds||0)+'</div></div><div class="stats-card"><small>All time</small><b>'+String(totalStatCards())+' cards</b><div>'+fmtStudyTime(totalStatSeconds())+'</div></div></div>';
+  }
+}
+setInterval(()=>{
+  const now=Date.now();
+  const delta=Math.max(0,Math.min(15,Math.floor((now-lastTick)/1000)));
+  lastTick=now;
+  if(document.visibilityState==='visible' && (now-lastActivity)<300000 && delta>0){
+    ensureDay().seconds+=delta;
+    sessionSeconds+=delta;
+    saveStats();
+    updateStatsUI();
+  }
+},10000);
+document.addEventListener('visibilitychange',()=>{lastTick=Date.now();saveStats();updateStatsUI()});
+window.addEventListener('pagehide',()=>{saveStats()});
+
 function save(){try{localStorage.setItem(KEY,JSON.stringify(state))}catch(e){}}
 function current(){return MAP[state.queue[0]]||CARDS[0]}
 function level(id){return Math.max(0,Math.min(4,state.mastery[id]||0))}
@@ -129,12 +187,16 @@ function rate(kind){
   state.queue=rest;
   state.mastery[c.id]=newLv;
   state.reviews++;
+  ensureDay().cards++;
+  saveStats();
+  updateStatsUI();
   picked=null;revealed=false;save();
   toast(kind[0].toUpperCase()+kind.slice(1)+' → back after '+gap+' cards');
   render();window.scrollTo({top:0,behavior:'smooth'});
 }
 document.querySelectorAll('[data-rate]').forEach(b=>b.addEventListener('click',()=>rate(b.dataset.rate)));
-$('settings').onclick=()=>$('overlay').classList.remove('hidden');
+$('settings').onclick=()=>{$('overlay').classList.remove('hidden');updateStatsUI()};
+$('showStats').onclick=()=>{const d=$('statsDetail');d.classList.toggle('hidden');updateStatsUI()};
 $('close').onclick=()=>$('overlay').classList.add('hidden');
 $('overlay').onclick=e=>{if(e.target===$('overlay'))$('overlay').classList.add('hidden')};
 $('shuffle').onclick=()=>{state.queue=shuffle(state.queue);picked=null;revealed=false;save();$('overlay').classList.add('hidden');toast('Queue shuffled');render()};
@@ -142,5 +204,6 @@ $('reset').onclick=()=>{if(confirm('Reset all study progress and mastery levels?
 function toast(m){let t=$('toast');t.textContent=m;t.classList.add('show');setTimeout(()=>t.classList.remove('show'),1400)}
 if('speechSynthesis'in window){window.speechSynthesis.getVoices();window.speechSynthesis.onvoiceschanged=()=>window.speechSynthesis.getVoices()}
 render();
+updateStatsUI();
 </script>
 </body></html>
