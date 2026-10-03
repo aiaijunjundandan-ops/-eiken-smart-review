@@ -143,7 +143,7 @@ function render(){
   if(c.type==='vocab'){
     h+='<div class="vocab-wrap"><div class="vocab">'+esc(c.front)+'</div>'+(revealed?speaker(c.front):'')+'</div>';
     if(!revealed)h+='<button class="reveal" id="reveal">Show answer</button>';
-    else {h+='<div class="answer-box"><div class="answer-line" style="font-size:22px;text-align:center">'+esc(c.back)+'</div><div class="example-box" data-card-id="'+esc(c.id)+'" data-example-word="'+esc(c.front)+'"><div class="example-title">Example sentence</div><div class="example-sentence example-loading">Loading a different example…</div><div class="example-actions"><button class="speak" type="button" data-example-speak="1" data-speak="" disabled>🔊 Hear example</button></div></div></div>';}}
+    else {h+='<div class="answer-box"><div class="answer-line" style="font-size:22px;text-align:center">'+esc(c.back)+'</div><div class="example-box" data-card-id="'+esc(c.id)+'" data-example-word="'+esc(c.front)+'"><div class="example-title">Example sentence</div><div class="example-sentence example-loading">Loading a different example…</div><div class="example-actions"><button class="speak" type="button" data-example-speak="1" data-speak="" disabled>🔊 Hear example</button></div></div></div>';}
   }else{
     if(revealed)h+='<div class="q-head"><button class="speak" type="button" data-speak="'+esc(c.front)+'">🔊 Read question</button></div>';
     h+='<div class="prompt">'+esc(c.front)+'</div><div class="options">';
