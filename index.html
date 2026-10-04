@@ -24,7 +24,7 @@
 </section>
 <div class="foot">Progress saves automatically on this device. Pronunciation appears only after you answer. Familiar cards spread farther apart over time.</div>
 </div>
-<div class="overlay hidden" id="overlay"><div class="panel"><h2>Study settings</h2><p><b>Adaptive review:</b> each card has its own Level 0–4. Normal raises it by 1, Easy by 2, Hard lowers it by 1. “+N” means exactly N other cards appear before this card returns.</p><button class="setting-btn" id="showStats">📊 Study stats</button><div id="statsDetail" class="hidden"></div><button class="setting-btn" id="shuffle">🔀 Shuffle current queue</button><button class="setting-btn danger" id="reset">↻ Reset all progress</button><button class="setting-btn" id="close">Close</button></div></div>
+<div class="overlay hidden" id="overlay"><div class="panel"><h2>Study settings</h2><p><b>Adaptive review:</b> cards are shown as Level 1–5. A new card starts at Level 1. Normal moves it up 1 level, Easy moves it up 2, and Hard moves it down 1. “+N” means exactly N other cards appear before this card returns.</p><button class="setting-btn" id="showStats">📊 Study stats</button><div id="statsDetail" class="hidden"></div><button class="setting-btn" id="shuffle">🔀 Shuffle current queue</button><button class="setting-btn danger" id="reset">↻ Reset all progress</button><button class="setting-btn" id="close">Close</button></div></div>
 <div class="toast" id="toast"></div>
 <script src="examples-1.js"></script>
 <script src="examples-2.js"></script>
@@ -159,7 +159,7 @@ function speaker(text,label='Hear pronunciation'){return '<button class="speaker
 function render(){
   let c=current(),lv=level(c.id),g=gapsFor(c.id);
   $('source').textContent=c.source||c.tags||'Eiken 1級';
-  $('level').textContent='Level '+lv+'/4';
+  $('level').textContent='Level '+(lv+1)+'/5';
   $('cardNum').textContent='#'+c.id;
   $('reviews').textContent=state.reviews;
   $('accuracy').textContent=state.answered?Math.round(state.correct/state.answered*100)+'%':'—';
