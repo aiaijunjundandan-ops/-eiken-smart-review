@@ -54,7 +54,7 @@ function statsDate(){
 }
 function ensureDay(){
   const k=statsDate();
-  if(!studyStats.byDate[k])studyStats.byDate[k]={cards:0,seconds:0};
+  if(!studyStats.byDate[k])studyStats.byDate[k]={cards:0,seconds:0,wrongByLevel:{}};if(!studyStats.byDate[k].wrongByLevel)studyStats.byDate[k].wrongByLevel={};
   return studyStats.byDate[k];
 }
 function saveStats(){try{localStorage.setItem(STATS_KEY,JSON.stringify(studyStats))}catch(e){}}
@@ -68,6 +68,23 @@ function fmtStudyTime(sec){
 }
 function totalStatCards(){return Object.values(studyStats.byDate).reduce((n,x)=>n+(Number(x.cards)||0),0)}
 function totalStatSeconds(){return Object.values(studyStats.byDate).reduce((n,x)=>n+(Number(x.seconds)||0),0)}
+function wrongByLevelTotals(days){
+  let start=null,end=new Date();end.setHours(0,0,0,0);
+  if(days){start=new Date(end);start.setDate(start.getDate()-(days-1))}
+  const totals={1:0,2:0,3:0,4:0,5:0};
+  for(const [key,val] of Object.entries(studyStats.byDate)){
+    if(start){
+      const d=new Date(key+'T00:00:00');
+      if(d<start||d>end)continue;
+    }
+    const wb=val.wrongByLevel||{};
+    for(let i=1;i<=5;i++)totals[i]+=Number(wb[i]||0);
+  }
+  return totals;
+}
+function wrongLevelHtml(t){
+  return '<div style="margin-top:10px;padding-top:10px;border-top:1px solid var(--line);font-size:12px;color:var(--muted);line-height:1.7"><b style="color:var(--text)">Wrong answers by level</b><br>Level 1: '+t[1]+' · Level 2: '+t[2]+' · Level 3: '+t[3]+' · Level 4: '+t[4]+' · Level 5: '+t[5]+'</div>';
+}
 
 function rangeStats(days){
   const end=new Date();
@@ -98,7 +115,7 @@ function updateStatsUI(){
   if(st)st.textContent=fmtStudyTime(sessionSeconds);
   const detail=document.getElementById('statsDetail');
   if(detail&&!detail.classList.contains('hidden')){
-    const w=rangeStats(7),m=rangeStats(30),y=rangeStats(365);detail.innerHTML='<div class="stats-rangegrid"><div class="stats-card"><small>Today</small><b>'+String(day.cards||0)+' cards</b><div>'+fmtStudyTime(day.seconds||0)+'</div></div><div class="stats-card"><small>1 week</small><b>'+String(w.cards)+' cards</b><div>'+fmtStudyTime(w.seconds)+'</div></div><div class="stats-card"><small>1 month</small><b>'+String(m.cards)+' cards</b><div>'+fmtStudyTime(m.seconds)+'</div></div><div class="stats-card"><small>1 year</small><b>'+String(y.cards)+' cards</b><div>'+fmtStudyTime(y.seconds)+'</div></div><div class="stats-card"><small>All time</small><b>'+String(totalStatCards())+' cards</b><div>'+fmtStudyTime(totalStatSeconds())+'</div></div></div>';
+    const w=rangeStats(7),m=rangeStats(30),y=rangeStats(365);const wt=wrongByLevelTotals(1),ww=wrongByLevelTotals(7),wm=wrongByLevelTotals(30),wy=wrongByLevelTotals(365),wa=wrongByLevelTotals();detail.innerHTML='<div class="stats-rangegrid"><div class="stats-card"><small>Today</small><b>'+String(day.cards||0)+' cards</b><div>'+fmtStudyTime(day.seconds||0)+'</div>'+wrongLevelHtml(wt)+'</div><div class="stats-card"><small>1 week</small><b>'+String(w.cards)+' cards</b><div>'+fmtStudyTime(w.seconds)+'</div>'+wrongLevelHtml(ww)+'</div><div class="stats-card"><small>1 month</small><b>'+String(m.cards)+' cards</b><div>'+fmtStudyTime(m.seconds)+'</div>'+wrongLevelHtml(wm)+'</div><div class="stats-card"><small>1 year</small><b>'+String(y.cards)+' cards</b><div>'+fmtStudyTime(y.seconds)+'</div>'+wrongLevelHtml(wy)+'</div><div class="stats-card"><small>All time</small><b>'+String(totalStatCards())+' cards</b><div>'+fmtStudyTime(totalStatSeconds())+'</div>'+wrongLevelHtml(wa)+'</div></div>';
   }
 }
 setInterval(()=>{
@@ -191,7 +208,7 @@ function render(){
   document.querySelectorAll('[data-choice]').forEach(b=>b.addEventListener('click',()=>choose(Number(b.dataset.choice))));
   let rev=$('reveal');if(rev)rev.onclick=()=>{revealed=true;render()};if(revealed)hydrateExamples();
 }
-function choose(i){if(revealed)return;let c=current();picked=i;revealed=true;state.answered++;if(c.options[i]?.letter===c.answer)state.correct++;save();render()}
+function choose(i){if(revealed)return;let c=current();picked=i;revealed=true;state.answered++;if(c.options[i]?.letter===c.answer){state.correct++;}else{let shownLevel=level(c.id)+1;let day=ensureDay();day.wrongByLevel[shownLevel]=(Number(day.wrongByLevel[shownLevel])||0)+1;saveStats();updateStatsUI();}save();render()}
 function rate(kind){
   let c=current(),lv=level(c.id),g=gapsFor(c.id),gap=g[kind],newLv=lv;
   if(kind==='hard')newLv=Math.max(0,lv-1);
